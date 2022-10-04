@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/kasa/node_modules
+/kasa/.pnp
+/kasa.pnp.js
+
+# testing
+/kasa/coverage
+
+# production
+/kasa/build
+
+# misc
+/kasa.DS_Store
+/kasa.env.local
+/kasa.env.development.local
+/kasa.env.test.local
+/kasa.env.production.local
+
+/kasanpm-debug.log*
+/kasayarn-debug.log*
+/kasayarn-error.log*
