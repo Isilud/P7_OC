@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Fiche_Logement.scss'
+import '../styles/FicheLogement.scss'
 
 function FicheLogement () {
   return (

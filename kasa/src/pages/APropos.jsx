@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/A_Propos.scss'
+import '../styles/APropos.scss'
 
 function APropos () {
   return (
