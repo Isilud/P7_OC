@@ -1,0 +1,14 @@
+.logo {
+  position: absolute;
+  left: 0%;
+  right: 83.04%;
+  top: 0%;
+  bottom: 0%;
+
+  @media screen and (max-width: 768px) {
+    left: 0%;
+    right: 56.72%;
+    top: 0%;
+    bottom: 0%;
+  }
+}
