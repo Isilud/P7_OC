@@ -1,0 +1,14 @@
+.header {
+  position: absolute;
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+
+  @media screen and (max-width: 768px) {
+    width: 335px;
+    height: 47px;
+    left: 20px;
+    top: 20px;
+  }
+}
