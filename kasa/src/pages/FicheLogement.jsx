@@ -9,4 +9,4 @@ function FicheLogement () {
   )
 }
 
-export default FicheLogement
+export { FicheLogement }
