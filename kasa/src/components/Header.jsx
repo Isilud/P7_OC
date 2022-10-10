@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Header.scss'
-import variables from '../styles/variables/colors.scss'
+import variables from '../styles/utils/colors.scss'
 
 import { Logo, Navigation } from './'
 
