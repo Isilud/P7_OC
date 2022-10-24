@@ -1,0 +1,37 @@
+@import './utils/colors.scss';
+
+.dropdown {
+    
+  background-color: $color_lightgray;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &_label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    border-radius: 0.5rem;
+    color: $color-white;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  &_content {
+
+    color : $primary;
+    font-size: 1.3rem;
+
+    &-closed {
+      padding: 0rem;
+      padding-top: 0rem;
+      max-height: 0rem;
+    }
+
+    &-open {
+      padding: 1rem;
+      padding-top: 1.5rem;
+      height: fit-content;
+    }
+  }
+}
