@@ -17,6 +17,10 @@
 
     :only-child {
       max-height: 50px;
+
+      @media screen and (max-width: 768px) {
+        max-height: 2.7rem;
+      }
     }
   }
 
@@ -32,5 +36,10 @@
     text-align: center;
 
     color: $color_white;
+
+    @media screen and (max-width: 768px) {
+      flex-grow: 2;
+      font-size: 0.9rem;
+    }
   }
 }

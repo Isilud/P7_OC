@@ -1,12 +1,28 @@
 @import './utils/font.scss';
 
-.app {
+* {
   box-sizing: border-box;
+}
+
+.app {
   margin: auto;
   max-width: 1440px;
-  min-width: 767px;
   width: 100%;
-  padding: 40px 100px;
+  padding: 2.5em 4em;
 
   background: #ffffff;
+
+  @media screen and (max-width: 768px) {
+    padding: 1.2rem;
+  }
+  
+
+  .page_container {
+    padding: 3rem 0;
+
+    @media screen and (max-width: 768px) {
+      padding: 1.2rem 0;
+    }
+
+  }
 }

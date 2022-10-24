@@ -1,0 +1,57 @@
+@import './utils/colors.scss';
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 142.6%;
+  color: $color_white;
+
+  @media screen and (max-width: 768px) {
+    height: 5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 0.6rem;
+    height: 6.8rem;
+  }
+
+  &_image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+    background-size: cover;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $color_black;
+      opacity: 0.3;
+      z-index: -1;
+    }
+  }
+
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
