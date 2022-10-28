@@ -1,0 +1,13 @@
+.apropos {
+  &_gallery {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.8rem;
+    padding: 1.8rem 6rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem 0rem;
+      row-gap: 1rem;
+    }
+  }
+}

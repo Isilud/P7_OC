@@ -16,12 +16,20 @@
   line-height: 142.6%;
   color: $color_white;
 
-  @media screen and (max-width: 768px) {
-    height: 5rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    border-radius: 0.6rem;
-    height: 6.8rem;
+  &-small {
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      border-radius: 0.6rem;
+      height: 6.8rem;
+    }
+  }
+  &-large {
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      border-radius: 0.6rem;
+    }
   }
 
   &_image {
@@ -31,6 +39,7 @@
     background-repeat: no-repeat;
     mix-blend-mode: darken;
     background-size: cover;
+    background-position: center;
     z-index: 1;
 
     &::before {
@@ -53,5 +62,39 @@
     height: 100%;
     width: 100%;
     padding: 0 1rem;
+  }
+
+  &_mImage {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      mix-blend-mode: darken;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $color_black;
+        opacity: 0.3;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.nodisplay {
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }

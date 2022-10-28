@@ -1,11 +1,44 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+
+import { Banner, Dropdown } from '../components'
+
 import '../styles/APropos.scss'
 
 function APropos () {
   return (
-    <>
-      APropos
-    </>
+    <div className="apropos">
+      <Banner
+        backgroundUrl={`${require('../assets/Banner_APropos.png')}`}
+        backgroundMobileUrl={`${require('../assets/Banner_APropos_Mobile.png')}`}
+        large={true}
+      ></Banner>
+      <div className="apropos_gallery">
+        <Dropdown title="Fiabilité">
+          Les annonces postées sur Kasa garantissent une fiabilité totale. Les
+          photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées par nos équipes.
+        </Dropdown>
+        <Dropdown title="Respect">
+          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+          comportement discriminatoire ou de perturbation du voisinage
+          entraînera une exclusion de notre plateforme.
+        </Dropdown>
+        <Dropdown title="Service">
+          Nos équipes se tiennent à votre disposition pour vous fournir une
+          expérience parfaite. N'hésitez pas à nous contacter si vous avez la
+          moindre question.
+        </Dropdown>
+        <Dropdown title="Responsabilité">
+          La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
+          pour les voyageurs, chaque logement correspond aux critères de
+          sécurité établis par nos services. En laissant une note aussi bien à
+          l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les
+          standards sont bien respectés. Nous organisons également des ateliers
+          sur la sécurité domestique pour nos hôtes.
+        </Dropdown>
+      </div>
+    </div>
   )
 }
 

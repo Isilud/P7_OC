@@ -3,12 +3,29 @@ import PropTypes from 'prop-types'
 
 import '../styles/Banner.scss'
 
-function Banner ({ backgroundUrl, children }) {
+function Banner ({
+  backgroundUrl,
+  backgroundMobileUrl,
+  large = false,
+  children
+}) {
+  if (!backgroundMobileUrl) {
+    backgroundMobileUrl = backgroundUrl
+  }
+
   return (
-    <div className="banner">
+    <div className={`banner ${large ? 'banner-large' : 'banner-small'}`}>
       <div
-        className="banner_image"
+        className={'banner_image nodisplay'}
         style={{ backgroundImage: `url(${backgroundUrl})` }}
+      >
+        <div className="banner_container">{children}</div>
+      </div>
+      <div
+        className="banner_mImage"
+        style={{
+          backgroundImage: `url(${backgroundMobileUrl})`
+        }}
       >
         <div className="banner_container">{children}</div>
       </div>
@@ -17,8 +34,10 @@ function Banner ({ backgroundUrl, children }) {
 }
 
 Banner.propTypes = {
-  children: PropTypes.any,
-  backgroundUrl: PropTypes.string.isRequired
+  backgroundUrl: PropTypes.string.isRequired,
+  backgroundMobileUrl: PropTypes.string,
+  large: PropTypes.bool.isRequired,
+  children: PropTypes.any
 }
 
 export { Banner }

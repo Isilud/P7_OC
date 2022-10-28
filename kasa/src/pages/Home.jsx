@@ -4,14 +4,26 @@ import { Banner, Card } from '../components'
 import '../styles/Home.scss'
 
 // Should be deleted when API available
-import logementList from '../data_back/logements.json'
+// import logementList from '../data_back/logements.json'
 
 function Home () {
   const [logements, setLogements] = useState([])
 
   useEffect(() => {
     // Should be replaced with a fetch when API available.
-    setLogements(logementList)
+    fetch('../../public/data_back/logements.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      }
+    })
+      .then((res) => {
+        console.log(res)
+        res.json()
+      })
+      .then((data) => setLogements(data))
+      .catch((err) => console.log(err))
+    // setLogements(logementList)
   }, [])
 
   return (
