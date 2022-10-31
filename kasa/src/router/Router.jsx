@@ -6,12 +6,16 @@ import { Home, APropos, FicheLogement, NotFound } from '../pages'
 function Router () {
   return (
     <React.StrictMode>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/APropos" element={<APropos />} />
-          <Route exact path="/FicheLogement" element={<FicheLogement />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/APropos" element={<APropos />} />
+        <Route
+          exact
+          path="/FicheLogement/:logementId"
+          element={<FicheLogement />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </React.StrictMode>
   )
 }

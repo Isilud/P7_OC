@@ -35,7 +35,11 @@ function Home () {
         {logements.map((logement, index) => {
           return (
             <div className="home_gallery_container" key={logement.id}>
-              <Card text={logement.title} backgroundUrl={logement.cover} />
+              <Card
+                text={logement.title}
+                backgroundUrl={logement.cover}
+                logementId={logement.id}
+              />
             </div>
           )
         })}
