@@ -1,0 +1,62 @@
+@import './utils/font.scss';
+@import './utils/colors.scss';
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 176px 58px;
+  }
+
+  &_code {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    color: $primary;
+
+    @media screen and (max-width: 768px) {
+      font-size: 96px;
+      line-height: 142.6%;
+    }
+  }
+
+  &_text {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: $primary;
+    padding-top: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 142.6%;
+    }
+  }
+
+  &_link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration-line: underline;
+    line-height: 26px;
+    margin-top: 182px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 133px;
+      font-size: 14px;
+      line-height: 142.6%;
+    }
+
+    &:visited {
+      color: $primary;
+    }
+  }
+}

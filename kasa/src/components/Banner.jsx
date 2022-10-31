@@ -36,7 +36,7 @@ function Banner ({
 Banner.propTypes = {
   backgroundUrl: PropTypes.string.isRequired,
   backgroundMobileUrl: PropTypes.string,
-  large: PropTypes.bool.isRequired,
+  large: PropTypes.bool,
   children: PropTypes.any
 }
 
