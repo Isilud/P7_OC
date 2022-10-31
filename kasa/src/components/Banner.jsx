@@ -16,13 +16,13 @@ function Banner ({
   return (
     <div className={`banner ${large ? 'banner-large' : 'banner-small'}`}>
       <div
-        className={'banner_image nodisplay'}
+        className={'banner_image banner_image-desktop'}
         style={{ backgroundImage: `url(${backgroundUrl})` }}
       >
         <div className="banner_container">{children}</div>
       </div>
       <div
-        className="banner_mImage"
+        className="banner_image banner_image-mobile"
         style={{
           backgroundImage: `url(${backgroundMobileUrl})`
         }}

@@ -42,6 +42,20 @@
     background-position: center;
     z-index: 1;
 
+    &-desktop {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -62,39 +76,5 @@
     height: 100%;
     width: 100%;
     padding: 0 1rem;
-  }
-
-  &_mImage {
-    display: none;
-
-    @media screen and (max-width: 768px) {
-      display: block;
-      position: relative;
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      mix-blend-mode: darken;
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: $color_black;
-        opacity: 0.3;
-        z-index: -1;
-      }
-    }
-  }
-}
-
-.nodisplay {
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 }
