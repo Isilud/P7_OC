@@ -1,0 +1,61 @@
+@import './utils/colors.scss';
+
+.slideshow {
+  display: flex;
+  flex-direction: row;
+  height: 415px;
+  mix-blend-mode: normal;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #ff6060;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    height: 255px;
+  }
+
+  &_arrow {
+    @media screen and (max-width: 768px) {
+      height: 20px;
+      width: 12px;
+    }
+  }
+
+  &_display {
+    flex-grow: 16;
+  }
+
+  &_counter {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: $color-white;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: default;
+    overflow: hidden;
+    outline: none;
+  }
+}
