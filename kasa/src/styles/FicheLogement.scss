@@ -1,0 +1,98 @@
+@import './utils/colors.scss';
+
+p {
+  margin: 0;
+}
+
+.logement {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  color: $primary;
+
+  @media screen and (max-width: 768px) {
+    row-gap: 15px;
+  }
+
+  &_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 76px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    color: $primary;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &_location {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: $primary;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &_tags {
+    display: flex;
+    flex-direction: row wrap;
+    column-gap: 10px;
+  }
+
+  &_note {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &_dropdown {
+    width: 50%;
+
+    &_list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

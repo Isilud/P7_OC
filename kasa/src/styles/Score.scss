@@ -1,0 +1,12 @@
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  height: 30px;
+  @media screen and (max-width: 768px) {
+    column-gap: 5px;
+    height: 15px;
+  }
+}

@@ -1,9 +1,9 @@
 @import './utils/colors.scss';
 
 .dropdown {
-  background-color: $color_lightgray;
   border-radius: 0.5rem;
   overflow: hidden;
+  height: 100%;
 
   &_label {
     display: flex;
@@ -24,6 +24,8 @@
   &_content {
     color: $primary;
     font-size: 1.3rem;
+    overflow: hidden;
+    background-color: $color_lightgray;
 
     @media screen and (max-width: 768px) {
       font-size: 0.8rem;
@@ -38,7 +40,7 @@
     &-open {
       padding: 1rem;
       padding-top: 1.5rem;
-      height: fit-content;
+      height: 100%;
     }
   }
 }
