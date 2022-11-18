@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Dropdown, Slideshow } from '../components'
-import { Host } from '../components/Host'
-import { Score } from '../components/Score'
-import { Tag } from '../components/Tag'
+import { Dropdown, Slideshow, Host, Score, Tag } from '../components'
 
 import '../styles/FicheLogement.scss'
 

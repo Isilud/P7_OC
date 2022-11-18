@@ -16,7 +16,10 @@ function Dropdown ({ title, children }) {
     <div className="dropdown">
       <div className="dropdown_label" onClick={() => toogle()}>
         {title}
-        <ArrowLogo transform={isClose ? 'scale(1,1)' : 'scale(1,-1)'} />
+        <ArrowLogo
+          className="dropdown_arrow"
+          transform={isClose ? 'scale(1,1)' : 'scale(1,-1)'}
+        />
       </div>
       <div
         className={`dropdown_content dropdown_content${
