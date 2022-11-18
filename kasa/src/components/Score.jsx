@@ -11,7 +11,6 @@ function Score ({ note = 0 }) {
     stars.push(i < note)
   }
 
-  console.log(stars)
   return (
     <div className="score">
       {stars.map((el, index) => {
