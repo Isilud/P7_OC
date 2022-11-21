@@ -1,13 +1,23 @@
 import React from 'react'
+import { Logo, Navigation } from '../components'
+import { useNavigate } from 'react-router-dom'
+
 import '../styles/Header.scss'
 import variables from '../styles/utils/colors.scss'
 
-import { Logo, Navigation } from '../components'
-
 function Header () {
+  const navigate = useNavigate()
+
   return (
     <div className="header">
-      <Logo color={variables.primary} />
+      <div
+        className="header_logo"
+        onClick={() => {
+          navigate('/')
+        }}
+      >
+        <Logo color={variables.primary} />
+      </div>
       <Navigation />
     </div>
   )

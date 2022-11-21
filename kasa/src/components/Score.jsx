@@ -17,7 +17,7 @@ function Score ({ note = 0 }) {
         return (
           <SVGStar
             key={index}
-            fill={el ? variables.primary : variables.color_lightgray}
+            fill={el ? variables.primary : variables.color_gray}
           />
         )
       })}

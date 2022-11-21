@@ -58,7 +58,7 @@ function FicheLogement () {
             <Dropdown title="Description">{logement.description}</Dropdown>
           </div>
           <div className="logement_dropdown">
-            <Dropdown title="Equipement">
+            <Dropdown title="Equipements">
               <ul className="logement_dropdown_list">
                 {logement.equipments.map((el, index) => (
                   <li key={index}>{el}</li>

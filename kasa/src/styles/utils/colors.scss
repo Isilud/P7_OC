@@ -1,12 +1,14 @@
 $color_white: #ffffff;
 $color_black: #000000;
-$color_lightgray: #F7F7F7;
+$color_gray: #e3e3e3;
+$color_lightgray: #f7f7f7;
 
-$primary: #FF6060;
+$primary: #ff6060;
 
 :export {
-    color_white: $color_white;
-    color_black: $color_black;
-    color_lightgray: $color_lightgray;
-    primary: $primary;
+  color_white: $color_white;
+  color_black: $color_black;
+  color_lightgray: $color_lightgray;
+  color_gray: $color_gray;
+  primary: $primary;
 }
