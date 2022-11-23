@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import '../styles/Slideshow.scss'
 
-function Slideshow ({ pictures }) {
+function Slideshow ({ pictures, disabled = false }) {
   const [index, setIndex] = useState(0)
 
   const previous = () => {
@@ -32,7 +32,10 @@ function Slideshow ({ pictures }) {
       className="slideshow"
       style={{ backgroundImage: `url(${pictures[index]})` }}
     >
-      <div className="slideshow_button" onClick={previous}>
+      <div
+        className={`slideshow_button${disabled ? '-disabled' : ''}`}
+        onClick={previous}
+      >
         <ArrowLogo className="slideshow_arrow" transform={'scale(-1,1)'} />
       </div>
       <div className="slideshow_display">
@@ -40,7 +43,10 @@ function Slideshow ({ pictures }) {
           {index + 1}/{pictures.length}
         </div>
       </div>
-      <div className="slideshow_button" onClick={next}>
+      <div
+        className={`slideshow_button${disabled ? '-disabled' : ''}`}
+        onClick={next}
+      >
         <ArrowLogo className="slideshow_arrow" />
       </div>
     </div>
@@ -48,7 +54,8 @@ function Slideshow ({ pictures }) {
 }
 
 Slideshow.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string).isRequired
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+  disabled: PropTypes.bool
 }
 
 export { Slideshow }

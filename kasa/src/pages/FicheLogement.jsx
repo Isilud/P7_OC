@@ -31,7 +31,10 @@ function FicheLogement () {
   return (
     logement && (
       <div className="logement">
-        <Slideshow pictures={logement.pictures}></Slideshow>
+        <Slideshow
+          pictures={logement.pictures}
+          disabled={logement.pictures.length === 1}
+        ></Slideshow>
         <div className="logement_row">
           <div className="logement_left">
             <div>
